@@ -7,7 +7,17 @@ public class Demo {
 		
 		if(Pattern.matches("[a-zA-Z0-9]{3, 8}", password) && Pattern.matches("[6789]{1}[0-9]{9}", mobNumber) && Pattern.matches("[a-z]{3,6}+[@]+[a-j]{3, 10}+[\\.]+[com]{3}", email)) {
 			
-			System.out.println("Hello");
+						Customer c = new Customer();
+			c.setEmail(email);
+			c.setPassword(password);
+			c.setUsername(usrname);
+			c.setMobileNumber(mobNumber);
+			
+			System.out.println("User Details -------");
+			System.out.println("EMail : " + c.getEmail());
+			System.out.println("Username : " + c.getUsername());
+			System.out.println("Password : " + c.getPassword());
+			System.out.println("Mobile : " + c.getMobileNumber());
 		}
 		else {
 			System.out.println("Invalid Inputs");
